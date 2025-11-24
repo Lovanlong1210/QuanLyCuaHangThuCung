@@ -51,64 +51,11 @@ Hệ thống Quản lý Đoàn viên trong trường Đại học được xây 
 ---
 
 ## 🖼️ 3. Hình ảnh các chức năng
-Dưới đây là các ảnh minh hoạ cho những chức năng chính của hệ thống. Để hiển thị ảnh trong README, hãy đặt các file ảnh vào thư mục `docs/screenshots/` trong dự án và đặt đúng tên như ví dụ bên dưới.
 
-> Gợi ý cấu trúc thư mục:
->
-> - `docs/`
->   - `logo/` (đã có)
->   - `screenshots/`
->     - `registration.png`
->     - `login.png`
->     - `dashboard.png`
->     - `new_booking.png`
->     - `my_bookings.png`
->     - `manage_pets.png`
->
-
-### 3.1 Gallery ảnh (ví dụ)
-
-<p align="center">
-  <img src="docs/screenshots/registration.png" alt="Đăng ký" width="360" style="margin:8px;" />
-  <img src="docs/screenshots/login.png" alt="Đăng nhập" width="360" style="margin:8px;" />
-</p>
-
-<p align="center">
-  <img src="docs/screenshots/dashboard.png" alt="Bảng điều khiển (Admin)" width="360" style="margin:8px;" />
-  <img src="docs/screenshots/new_booking.png" alt="Đặt lịch mới" width="360" style="margin:8px;" />
-</p>
-
-<p align="center">
-  <img src="docs/screenshots/my_bookings.png" alt="Lịch sử đặt lịch" width="360" style="margin:8px;" />
-  <img src="docs/screenshots/manage_pets.png" alt="Quản lý thú cưng (Admin)" width="360" style="margin:8px;" />
-</p>
-
-### 3.2 Mô tả ảnh
-- `registration.png`: Form đăng ký tài khoản người dùng.
-- `login.png`: Form đăng nhập (với thông báo lỗi/thành công).
-- `dashboard.png`: Giao diện quản trị viên (danh sách đặt lịch, phân trang).
-- `new_booking.png`: Form đặt lịch mới cho người dùng.
-- `my_bookings.png`: Danh sách lịch của người dùng.
-- `manage_pets.png`: Trang quản lý thú cưng của admin (xem, sửa, xoá).
-
-### 3.3 Hướng dẫn chụp và thêm ảnh
-- Kích thước khuyên dùng: rộng 1280px hoặc 1024px, PNG hoặc JPG.
-- Đặt ảnh vào `docs/screenshots/` với tên file như ở trên.
-- Nếu bạn muốn hiển thị ảnh với kích thước khác, chỉnh `width` trong thẻ `img` hoặc sử dụng CSS riêng.
-
----
-
-## License & Notes
-- Tài liệu này là phần mô tả nhanh cho dự án. Bạn có thể mở rộng README với hướng dẫn cài đặt (XAMPP, import DB), cách chạy, và các endpoint API nếu cần.
+<img width="1912" height="729" alt="image" src="https://github.com/user-attachments/assets/5c266b33-15d3-4956-9cd3-c226eda1919d" />
 
 
----
-
-*Generated: Thêm phần 3 (Hình ảnh các chức năng) vào README.*
-
----
-
-## 4. Hướng dẫn cài đặt (Quick Start)
+## 4. Hướng dẫn cài đặt
 
 ### 4.1 Cài đặt công cụ, môi trường và các thư viện cần thiết
 
@@ -255,9 +202,3 @@ VALUES ('Admin', 'admin@example.com', '<PASTE_HASH_HERE>', '0123456789', 'admin'
 
 1. Mở `http://localhost/BTL/views/register.php` và đăng ký một tài khoản.
 2. Đăng nhập vào `phpMyAdmin`, tìm bản ghi trong `customers` và thay đổi trường `role` thành `admin` cho tài khoản đó.
-
----
-
-Nếu bạn muốn, tôi có thể:
-- Tạo sẵn một script SQL `db/init_admin.sql` để chèn tài khoản admin mẫu (tôi sẽ không commit mật khẩu thô — sẽ dùng hash), hoặc
-- Thêm tính năng tự động set role khi đăng ký nếu email thuộc danh sách admin (không khuyến nghị cho production).
