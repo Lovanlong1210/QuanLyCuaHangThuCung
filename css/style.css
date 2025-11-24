@@ -1,0 +1,657 @@
+/* CSS TƯƠI MỚI VÀ CÂN ĐỐI HƠN */
+
+/* Biến màu (dễ thay đổi) */
+:root {
+    --primary-color: #00A896;
+    /* Xanh ngọc */
+    --primary-hover: #007A70;
+    --light-bg: #f8f9fa;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Reset và Font chữ chung */
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+
+    /* background-color: #e9ecef;
+   
+    background-color: #faf8f5; 
+    */
+    background-color: #fdfdfd;
+    /* Màu dự phòng */
+    background: linear-gradient(to bottom, #ffffff, #eef5f9);
+    margin: 0;
+    padding-top: 80px;
+     /* Reserve space for the fixed footer-bottom so content isn't hidden.
+         Reduced so footer columns sit just above the copyright bar. */
+     padding-bottom: 72px;
+    /* Đẩy nội dung xuống dưới header cố định */
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Header (Thanh điều hướng) */
+header {
+    background: var(--white);
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    position: fixed;
+    /* Cố định trên cùng */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.container-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    /* Chiều cao header */
+}
+
+.logo a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.user-greeting {
+    font-style: italic;
+    color: #555;
+}
+
+/* Nút bấm trên Header */
+.btn-register,
+.btn-logout {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 8px 16px;
+    border-radius: 50px;
+    /* Bo tròn */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover,
+.btn-logout:hover {
+    background-color: var(--primary-hover);
+    color: var(--white) !important;
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+    /* Màu đỏ cho logout */
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+
+/* Thùng chứa nội dung chính */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+/* Ensure any form inside the common `.container` is visually constrained
+   and centered so user-facing pages don't look flush to the viewport edges. */
+.container form,
+.container .form-container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding-left: 6px;
+    padding-right: 6px;
+    box-sizing: border-box;
+}
+
+/* Trang chủ (index.php) */
+.homepage-content {
+    text-align: center;
+    /* Cân bằng */
+    padding: 40px 20px;
+}
+
+.homepage-content h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.homepage-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.homepage-content .cta-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.homepage-content .cta-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.homepage-image {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+
+/* Tiêu đề chung */
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--light-bg);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Bảng biểu */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--light-bg);
+    font-weight: 700;
+}
+
+table tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Khoảng cách giữa các mục */
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+
+/* Form container utility: constrain wide forms and add comfortable padding
+   Use by wrapping form markup with <div class="form-container"> ... </div> */
+.form-container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 18px 22px;
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 10px;
+}
+
+/* Optional form row/group spacing for denser layouts */
+.form-group {
+    padding: 8px 0;
+}
+
+/* Make inputs visually separated from the page edges on small screens */
+@media (max-width: 768px) {
+    .form-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+form input[type="number"],
+form input[type="datetime-local"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+form button {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background: var(--primary-hover);
+}
+
+/* Button helpers used in admin lists */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 6px;
+    border: 1px solid transparent;
+}
+.btn-edit {
+    background: #17a2b8;
+    color: #fff;
+    border-color: #138496;
+}
+.btn-edit:hover {
+    background: #138496;
+}
+.btn-delete {
+    background: #dc3545;
+    color: #fff;
+    border-color: #c82333;
+}
+.btn-delete:hover {
+    background: #c82333;
+}
+
+/* Thông báo lỗi/thành công */
+.message {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Footer */
+footer {
+/* ======================================= */
+/* CSS CHO FOOTER MỚI (CÓ MAP & LIÊN HỆ)   */
+/* ======================================= */
+
+.site-footer {
+    text-align: left; 
+    margin-top: 40px;
+    padding: 0; 
+    color: #ccc; 
+    background: #2c3e50; /* Nền tối */
+    border-top: none; 
+}
+
+/* Ensure the main footer content sits directly above the fixed copyright bar */
+.site-footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.footer-container {
+    max-width: 1100px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    
+    /* ĐÂY LÀ DÒNG QUAN TRỌNG NHẤT ĐỂ CHIA CỘT */
+    grid-template-columns: 1fr 1fr 1.2fr; 
+    
+    gap: 30px; 
+}
+
+.footer-column h3 {
+    color: var(--primary-color); 
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-column p {
+    margin: 0 0 10px 0;
+    color: #bdc3c7; 
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.footer-column p strong {
+    color: var(--white);
+}
+
+/* CSS cho bản đồ */
+.map-container {
+    width: 100%;
+    height: 200px; 
+    border-radius: 8px;
+    overflow: hidden; 
+    border: 2px solid var(--primary-color);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Thanh Copyright ở dưới cùng */
+.footer-bottom {    
+    background: #233140; 
+    text-align: center;
+    padding: 15px 0;
+    color: #7f8c8d;
+    font-size: 14px;
+    border-top: 1px solid #3d5269;
+}
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Make the bottom copyright bar fixed to the viewport bottom
+   and ensure it overlays above page content without hiding it (body has bottom padding) */
+.footer-bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1200;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+}
+
+/* Responsive cho di động */
+@media (max-width: 768px) {
+    .footer-container {
+        /* Xếp chồng 3 cột thành 1 khi xem trên điện thoại */
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+}
+
+/* Responsive cho di động (quan trọng) */
+/* Khi màn hình nhỏ hơn 768px... */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* ...3 cột sẽ xếp chồng lên nhau */
+        gap: 40px;
+    }
+}
+}
+
+/* ======================================= */
+/* CSS CHO HERO SLIDER MỚI (TRANG CHỦ)     */
+/* ======================================= */
+
+/* Xóa nền trắng của .container trên trang chủ */
+/* (Chúng ta dùng body background) */
+.hero-slider+.container {
+    background: none;
+    box-shadow: none;
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    /* Chiều cao slider = 100% chiều cao màn hình TRỪ đi chiều cao header (80px) */
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    /* Ẩn các phần thừa */
+    background-color: #333;
+    /* Màu nền dự phòng */
+}
+
+/* Kiểu dáng cho mỗi slide ảnh */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* Ảnh luôn vừa vặn */
+    background-position: center;
+
+    /* Hiệu ứng */
+    opacity: 0;
+    /* Mặc định ẩn đi */
+    animation: imageFade 24s infinite;
+    /* Tên hiệu ứng, tổng thời gian, lặp vô hạn */
+
+    /* Hiệu ứng Ken Burns (phóng to chậm) */
+    transform: scale(1.15);
+    animation-name: imageFade, kenBurns;
+    animation-duration: 24s, 30s;
+    /* Ghép 2 hiệu ứng */
+    animation-iteration-count: infinite;
+}
+
+/* Hiệu ứng mờ dần (Fade) */
+@keyframes imageFade {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    /* Hiện ra */
+    25% {
+        opacity: 1;
+    }
+
+    /* Giữ nguyên */
+    35% {
+        opacity: 0;
+    }
+
+    /* Mờ đi */
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng Phóng to chậm (Ken Burns) */
+@keyframes kenBurns {
+    0% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Xếp chồng và hẹn giờ cho các ảnh */
+/* Mỗi ảnh sẽ chạy sau 6s (24s / 4 ảnh) */
+.slide:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 12s;
+}
+
+.slide:nth-child(4) {
+    animation-delay: 18s;
+}
+
+/* Lớp phủ nội dung (Text) */
+.hero-content {
+    position: relative;
+    /* Nằm đè lên trên */
+    z-index: 10;
+    color: var(--white);
+    text-align: center;
+
+    /* Căn giữa tuyệt đối */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Thêm bóng cho chữ để dễ đọc */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+    /* Hiệu ứng xuất hiện cho text */
+    opacity: 0;
+    animation: textFadeIn 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes textFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--white);
+    /* Ghi đè màu xanh của h2 */
+    border-bottom: none;
+    /* Xóa gạch chân h2 */
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.hero-content .cta-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .cta-button:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+    /* Hiệu ứng nút to lên */
+}
+
+/* Bố cục 3 cột cho trang chủ tĩnh */
+.homepage-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Cột giữa gấp đôi 2 cột bên */
+    gap: 30px;
+    /* Khoảng cách giữa các cột */
+    align-items: flex-start;
+}
+
+.sidebar-box {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.sidebar-box h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.sidebar-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-box ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-box ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.sidebar-box ul li a:hover {
+    color: var(--primary-hover);
+}
+
+.sidebar-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
