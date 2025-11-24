@@ -5,7 +5,7 @@
     </a>
 </h2>
 <h2 align="center">
-    Youth Union Member Management
+    Pet Store Manager
 </h2>
 <div align="center">
     <p align="center">
@@ -21,7 +21,7 @@
 </div>
  
 ## 📖 1. Giới thiệu
-Hệ thống Quản lý Đoàn viên trong trường Đại học được xây dựng nhằm hỗ trợ công tác quản lý, theo dõi và đánh giá hoạt động của Đoàn Thanh niên trong môi trường giáo dục đại học. Thay vì quản lý thủ công bằng giấy tờ hay các tệp Excel rời rạc, hệ thống mang đến một giải pháp tập trung, hiện đại và dễ sử dụng.
+Hệ thống Website Quản lý Dịch vụ Chăm sóc Thú cưng được xây dựng nhằm hỗ trợ công tác quản lý lịch hẹn, theo dõi hồ sơ sức khỏe thú cưng và vận hành các dịch vụ tại cửa hàng một cách hiệu quả. Thay vì quản lý thủ công bằng sổ sách ghi chép hay các tệp Excel rời rạc dễ gây nhầm lẫn, hệ thống mang đến một giải pháp số hóa tập trung, hiện đại và thân thiện với người dùng.
 
 ## 🔧 2. Các công nghệ được sử dụng
 <div align="center">
@@ -53,8 +53,17 @@ Hệ thống Quản lý Đoàn viên trong trường Đại học được xây 
 ## 🖼️ 3. Hình ảnh các chức năng
 ## Trang đăng nhập
 <img width="1919" height="910" alt="image" src="https://github.com/user-attachments/assets/0d5fc1a0-420b-4ff6-9796-d4e277139f07" />
-## Tranng đăng ký
+
+## Trang đăng ký
 <img width="1919" height="852" alt="image" src="https://github.com/user-attachments/assets/49e22961-7cf5-4e9f-b53f-5eac067f1876" />
+
+## Bảng điều khiển ADMIN
+<img width="1919" height="857" alt="image" src="https://github.com/user-attachments/assets/456791d7-b4c4-4040-bb50-9abe4b632458" />
+
+## Đặt lịch mới
+<img width="1919" height="855" alt="image" src="https://github.com/user-attachments/assets/efceb7c2-3eb3-4e8d-9272-6d2f41f859e0" />
+
+
 
 
 ## 4. Hướng dẫn cài đặt
@@ -113,10 +122,7 @@ $pass = ''; // XAMPP mặc định trống
   - Không bật `display_errors` trên môi trường production.
   - Đừng lưu mật khẩu DB ở trạng thái mặc định nếu máy có kết nối mạng công cộng.
   - Cân nhắc sử dụng file cấu hình ngoài (ví dụ `.env`) để lưu thông tin nhạy cảm.
-
-
-*Nếu bạn muốn, tôi có thể thêm hướng dẫn tạo file SQL export của DB hiện tại, hoặc tự động hoá việc import (ví dụ thêm `db/dump.sql` vào repo).* 
-
+  - 
 ### 4.2 Tải project
 
 Bạn có thể tải mã nguồn bằng `git` hoặc tải file zip rồi giải nén vào thư mục web root.
@@ -130,8 +136,6 @@ git clone https://github.com/your-repo/your-project.git BTL
 ```
 
 - Hoặc tải file ZIP từ giao diện GitHub và giải nén vào `C:\xampp\htdocs\BTL`.
-
-- Nếu bạn chuyển mã nguồn thủ công, đảm bảo thư mục dự án nằm trong `htdocs` (hoặc web root tương đương).
 
 ### 4.3 Setup database
 
@@ -165,7 +169,7 @@ $user = 'root';
 $pass = ''; // XAMPP mặc định trống
 ```
 
-- Lưu file. Nếu bạn dùng môi trường khác (Docker, remote DB), hãy cập nhật host và thông tin xác thực tương ứng.
+- Lưu file. Nếu dùng môi trường khác (Docker, remote DB), hãy cập nhật host và thông tin xác thực tương ứng.
 
 ### 4.5 Chạy hệ thống
 
@@ -176,7 +180,7 @@ $pass = ''; // XAMPP mặc định trống
 http://localhost/BTL/views/login.php
 ```
 
-Hoặc nếu bạn đã cấu hình VirtualHost, dùng host bạn đã cấu hình.
+Hoặc nếu đã cấu hình VirtualHost, dùng host bạn đã cấu hình.
 
 ### 4.6 Đăng nhập lần đầu
 
