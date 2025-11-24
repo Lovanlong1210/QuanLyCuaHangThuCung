@@ -63,8 +63,8 @@ Hệ thống Website Quản lý Dịch vụ Chăm sóc Thú cưng được xây 
 ## Đặt lịch mới
 <img width="1919" height="855" alt="image" src="https://github.com/user-attachments/assets/efceb7c2-3eb3-4e8d-9272-6d2f41f859e0" />
 
-
-
+## Quản lý thú cưng
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/1e4579bd-c136-4bdd-acb8-8817f63db3e3" />
 
 ## 4. Hướng dẫn cài đặt
 
@@ -122,7 +122,7 @@ $pass = ''; // XAMPP mặc định trống
   - Không bật `display_errors` trên môi trường production.
   - Đừng lưu mật khẩu DB ở trạng thái mặc định nếu máy có kết nối mạng công cộng.
   - Cân nhắc sử dụng file cấu hình ngoài (ví dụ `.env`) để lưu thông tin nhạy cảm.
-  - 
+    
 ### 4.2 Tải project
 
 Bạn có thể tải mã nguồn bằng `git` hoặc tải file zip rồi giải nén vào thư mục web root.
@@ -134,7 +134,6 @@ Bạn có thể tải mã nguồn bằng `git` hoặc tải file zip rồi giả
 cd C:\xampp\htdocs
 git clone https://github.com/your-repo/your-project.git BTL
 ```
-
 - Hoặc tải file ZIP từ giao diện GitHub và giải nén vào `C:\xampp\htdocs\BTL`.
 
 ### 4.3 Setup database
@@ -168,7 +167,6 @@ $db   = 'pet_care_db';
 $user = 'root';
 $pass = ''; // XAMPP mặc định trống
 ```
-
 - Lưu file. Nếu dùng môi trường khác (Docker, remote DB), hãy cập nhật host và thông tin xác thực tương ứng.
 
 ### 4.5 Chạy hệ thống
@@ -179,7 +177,6 @@ $pass = ''; // XAMPP mặc định trống
 ```
 http://localhost/BTL/views/login.php
 ```
-
 Hoặc nếu đã cấu hình VirtualHost, dùng host bạn đã cấu hình.
 
 ### 4.6 Đăng nhập lần đầu
@@ -194,14 +191,12 @@ Có hai cách để có tài khoản admin ban đầu:
 # Chạy lệnh này để in ra hash (thay 'admin123' bằng mật khẩu mong muốn)
 php -r "echo password_hash('admin123', PASSWORD_DEFAULT) . PHP_EOL;"
 ```
-
 2. Dùng hash vừa tạo để chèn vào bảng `customers`:
 
 ```sql
 INSERT INTO customers (name, email, password, phone, role)
 VALUES ('Admin', 'admin@example.com', '<PASTE_HASH_HERE>', '0123456789', 'admin');
 ```
-
 3. Sau đó truy cập `http://localhost/BTL/views/login.php` và đăng nhập bằng `admin@example.com` / `admin123`.
 
 - Cách B — Đăng ký tài khoản và cập nhật role bằng database
